@@ -16,7 +16,7 @@ private:
 	Q* que_back;
 	int size;
 public:
-	QuEue() { que_front = new Q; que_back = new Q; size = 0; };
+	QuEue() { que_front = nullptr; que_back = nullptr; size = 0; };
 	T front();//返回队列中排在最前面的对象的引用
 	T back();//返回队列中排在最后面的对象的引用
 	bool push(const T& obj);//尾插法入队列

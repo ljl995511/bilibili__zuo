@@ -68,5 +68,8 @@
     <ClInclude Include="Two_Stack.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Tree_node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

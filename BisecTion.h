@@ -48,13 +48,12 @@ int Bisection_Greater(T* arr, int n, T value) {
 		int mid = L + ((R - L) >> 1);
 		//如果mid大于value，然后 R来到mid左边继续二分
 		//如果mid小于或等于value,则令L来到mid右边，index==mid ,继续二分找可以等于value的值
-		if (arr[mid] > value) {
-			//index = mid;
-			R = mid - 1;
+		if (arr[mid] < value) {
+			L = mid + 1;
 		}
 		else {
 			index = mid;
-			L = mid + 1;
+			R = mid - 1;
 		}
 
 	}
@@ -84,7 +83,23 @@ int Bisection_Less(T* arr, int n, T value) {
 
 }
 
-
+//利用lower来控制是找大于区还是小于区
+int less_higher(vector<int>& nums, int target, bool lower)
+{
+	int left = 0, right = (int)nums.size() - 1, ans = (int)nums.size();
+	while (left <= right) {
+		int mid = (left + right) / 2;
+		if (nums[mid] > target || (lower && nums[mid] >= target)) {
+			right = mid - 1;
+			ans = mid;
+		}
+		else {
+			left = mid + 1;
+		}
+	}
+	return ans;
+	//转自力扣
+}
 
 //二分法找局部最小值（数组无序，相邻不等）
 //关于局部最小的定义

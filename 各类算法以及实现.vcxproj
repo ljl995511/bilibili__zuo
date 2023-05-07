@@ -142,6 +142,7 @@
     <ClInclude Include="QuEue.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="BisecTion.h" />
+    <ClInclude Include="Tree_node.h" />
     <ClInclude Include="Two_Stack.h" />
     <ClInclude Include="对数器.h" />
     <ClInclude Include="Sort.h" />
